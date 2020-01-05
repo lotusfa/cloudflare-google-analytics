@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json.schemastore.org/install",
+  "resources": {
+    "body": [
+      {
+        "type": "style",
+        "src": "./build/styles.css"
+      },
+      {
+        "type": "script",
+        "src": "./build/index.js"
+      }
+    ]
+  },
+  "dns": [
+    {
+      "type": "TXT",
+      "content": "Managed TXT Record",
+      "name": "Created by create-cloudflare-app",
+      "ttl": 120
+    }
+  ],
+  "preview": {
+    "handlers": [
+      {
+        "options": ["_default"],
+        "execute": "INSTALL_SCOPE.setOptions(INSTALL_OPTIONS)"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "tracker_id": {
+        "title": "Google Tracker ID",
+        "description": "Add your tracker id here",
+        "type": "string",
+        "order": 0,
+        "default": "UA-XXXXX-Y"
+      }
+
+    }
+  }
+}
