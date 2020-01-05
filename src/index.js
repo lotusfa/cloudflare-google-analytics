@@ -10,6 +10,8 @@ function send_to_google_analytics () {
 
   ga('create', tracker_id, 'auto');
   ga('send', 'pageview');
+
+  console.log(tracker_id);
 }
 
 send_to_google_analytics()
