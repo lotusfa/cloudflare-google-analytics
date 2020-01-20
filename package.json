@@ -5,8 +5,8 @@
   "scripts": {
     "start": "npm-run-all dev:setup dev:webpack",
     "dev:webpack": "webpack --watch --colors",
-    "dev:setup": "npm-run-all lint",
-    "build": "npm-run-all lint build:webpack",
+    "dev:setup": "npm-run-all",
+    "build": "npm-run-all build:webpack",
     "build:webpack": "NODE_ENV=production webpack --colors",
     "lint": "node_modules/.bin/eslint --fix --ext .js src"
   },
